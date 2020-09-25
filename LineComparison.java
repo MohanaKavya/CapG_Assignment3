@@ -28,11 +28,14 @@ public class LineComparison {
 		Double Line_1 = new Double(length_of_line_1);
 		Double Line_2 = new Double(length_of_line_2);
 		
-		// Comparison of Two Lines using equals() Method and Display
-		if(Line_1.equals(Line_2))
-			System.out.println("Both the Lines are Equal");
-		else
-			System.out.println("Both the Lines are Not Equal");	
+		// Comparison of Two Lines using compareTo() Method and Display
+	        int compareValue = Line_1.compareTo(Line_2); 
+        	if (compareValue == 0) 
+            		System.out.println("Lengths of Line 1 and Line 2 are equal"); 
+       	 	else if (compareValue < 0) 
+            		System.out.println("Length of Line 1 is less than Line 2"); 
+        	else
+            		System.out.println("Length of Line 1 is greater than Line 2");
 
 	}
 
